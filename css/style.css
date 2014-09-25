@@ -1,0 +1,894 @@
+/* 
+Project Name: Bike2Bytes
+Author: Dave Morison
+Developer: Dave Morison
+*/
+
+
+/*==========================================
+/* SETUP                   
+/*========================================*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.half {
+     width: 100%;
+     padding-bottom: 18px;
+}
+
+.onethird {
+     width: 100%;
+}
+
+.twothird {
+     width: 100%;
+}
+
+.alignright {
+	float: right; 
+	padding: 10px;
+}
+
+.alignleft {
+	float: left; 
+	/*padding: 10px;*/
+}
+
+img {
+     max-width: 100%;
+}
+
+ul {
+     list-style-type: none;
+}
+
+/*===========================================
+/* BASE STYLES                   
+/*=========================================*/
+
+html {
+     position: relative;
+     width: 100%;
+     height: 100%;
+}
+
+body {
+     background-color: #ffffff;
+     color: #2f2e36;
+     font-family: Verdana, Helvetica, Arial, sans-serif;
+     font-size: 13px;
+     line-height: 1.8;
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     text-align: center;
+     position: relative;
+}
+
+.inner {
+     max-width: 1248px;
+     padding: 0;
+     margin: 0 auto;
+}
+
+/*===========================================
+/* HEADER                   
+/*=========================================*/
+
+.wrapper {
+     background: url(../images/pan.jpg) no-repeat center top;
+     background-size: cover;
+     background-attachment: fixed;
+     height: 100%;
+     position: relative;
+}
+
+.banner {
+     background: rgba(0, 0, 0, .6);
+     padding: 40px 5% 60px;
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 22%;
+     text-align: center;
+}
+
+.banner h1 {
+     font-family: 'Play', sans-serif;
+     font-size: 2.7em;
+     color: #fff;
+     margin: 0;
+     text-shadow: 0 0 20px #000;
+}
+
+.banner h3 {
+     color: #fff;
+     font-family: 'Indie Flower', cursive;
+     font-size: 1.6em;
+     margin: 0;
+     text-shadow: 0 0 20px #fff;
+}
+
+.banner a {
+     color: #fff;
+     text-decoration: none;
+}
+
+.banner nav {
+     margin-top: 25px;
+}
+
+.nav_container {
+     width: 130px;
+     margin: 0 auto;
+}
+
+.nav_container a {
+     display: block;
+     width: 130px;
+     color: #1CA4FF;
+     font-family: 'Play', sans-serif;
+     font-size: 1.4em;
+}
+
+.nav_container a:hover {
+     color: #F6FF00;
+     text-shadow: 0 0 20px #fff;
+}
+
+.default-head {
+     background: rgba(0, 0, 0, .7);
+     padding: 0;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     z-index: 10;
+}
+
+.lesserhead {
+     display: none;
+     position: relative;
+}
+
+.default-head .inner {
+     padding: 0 12px 12px 12px;
+}
+
+.title {
+     width: 248px;
+     margin: auto;
+}
+
+.title a {
+     text-decoration: none;
+}
+
+.title h1 {
+     font-family: 'Play', sans-serif;
+     font-size: 2.7em;
+     color: #fff;
+     margin: 0;
+     text-shadow: 0 0 20px #000;
+}
+
+.default-head nav {
+     color: #fff;
+     font-family: 'Play', sans-serif;
+     /*font-size: 1.5em;*/
+}
+
+.default-head nav ul {
+     margin-top: 0;
+}
+
+.default-head nav a {
+     color: #fff;
+     text-decoration: none;
+}
+/*.default-head nav a:hover {
+     text-shadow: 0 0 20px #000;
+}*/
+
+.menubtn {
+     display: none;
+     position: fixed;
+     right: 0;
+     z-index: 22;
+}
+
+.menubtn a {
+     display: block;
+     width: 42px;
+     height: 42px;
+     background-color: rgba(0, 0, 0, .7);
+     background-image: url(../images/head_menu_btn.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     margin: 0 auto 16px auto;
+}
+
+.menubtn a:hover {
+     opacity: 0.7;
+     -o-transition: all .5s;
+     -moz-transition: all .5s;
+     -webkit-transition: all .5s;
+     -ms-transition: all .5s;
+}
+
+.scrollarrow {
+     display: none;
+     position: fixed;
+     right: 0px;
+     bottom: 0px;
+}
+
+.scrollarrow a {
+     display: block;
+     width: 47px;
+     height: 52px;
+     background-color: rgba(0, 0, 0, .7);
+     background-image: url(../images/scrollarrow.png);
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+.scrollarrow a:hover {
+     opacity: 0.7;
+     -o-transition: all .5s;
+     -moz-transition: all .5s;
+     -webkit-transition: all .5s;
+     -ms-transition: all .5s;
+}
+
+/*===========================================
+/* CONTENT STYLES                   
+/*=========================================*/
+
+/************** SLIDER ***************/
+
+.sliderOuter {
+     width: 100%;
+     overflow: hidden;
+}
+
+.sliderInner {
+     position: relative;
+     left: 0;
+}
+
+article {
+     float: left;
+}
+
+.sliderControl {
+     width: 31px;
+     position: absolute;
+     top: 0;
+     z-index: 999;
+}
+.controlLeft {
+     left: 13px;
+}
+
+.sliderControl a {
+     display: none;
+     width: 31px;
+     height: 31px;
+     border-radius: 50%;
+     margin-top: 270px;
+}
+
+#previous {
+     background: url(../images/arrowLeft-2.png) no-repeat center;
+}
+#next {
+     background: url(../images/arrowRight-2.png) no-repeat center;
+}
+
+/*************************************/
+
+section {
+     width: 100%;
+     padding: 50px 0px;
+     position: relative;
+}
+
+section.first {
+     background: #45D649;
+     padding: 25px 0px;
+}
+
+section.second {
+     padding: 10px 0 25px 0;
+}
+
+.no-bottom-pad {
+     padding-bottom: 0px;
+}
+
+.geombck {
+     background: url(../images/geometry.png) repeat fixed;
+}
+
+section.second h2, section.about-second h2 {
+     color: #444;
+     font-family: 'Play', sans-serif;
+     font-size: 2.5em;
+     margin-top: 0px;
+}
+
+section.default-first h3 {
+     color: #fff;
+     font-family: 'Indie Flower', cursive;
+     font-size: 2.2em;
+     margin: 5px;
+     text-shadow: 0 0 20px #fff;
+}
+
+section.showcase-second {
+     background-image: none;
+}
+
+.block {
+     background-color: #fff;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100%;
+     padding-bottom: 22px;
+     margin: 10px;
+     min-height: 350px;
+}
+
+.block:hover {
+     -moz-box-shadow: 0px 0px 20px 0px #000;
+     -webkit-box-shadow: 0px 0px 20px 0px #000;
+     box-shadow: 0px 0px 20px 0px #000;
+     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')"; /* For IE 8 */
+     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); /* For IE 5.5 - 7 */
+     -o-transition: all .5s;
+     -moz-transition: all .5s;
+     -webkit-transition: all .5s;
+     -ms-transition: all .5s;
+}
+
+.block a {
+     display: block;
+     width: 64px;
+     background-color: #45D649;
+     color: #fff;
+     font-weight: bold;
+     text-decoration: none;
+     padding: 17px 12px;
+     margin: 0 auto;
+     border-radius: 50%;
+}
+.block a:hover {
+     color: #ddd;
+     opacity: 0.7;
+     -o-transition: all .5s;
+     -moz-transition: all .5s;
+     -webkit-transition: all .5s;
+     -ms-transition: all .5s;
+}
+
+.block p {
+     margin-left: 3px;
+     margin-right: 3px;
+}
+
+/********* ABOUT PAGE *********/
+
+.onethird img {
+     border: 0 solid #0080FF;
+     border-radius: 50%;
+}
+
+.entrance {
+     position: relative;
+     left: -500px;
+}
+
+.score {
+     background-image: url(../images/rating_5.png);
+     background-repeat: no-repeat;
+     display: inline-block;
+     width: 150px;
+     height: 26px;
+     overflow: hidden;
+     margin: 0 12px 0 0;
+}
+
+.about-row {
+     background-color: #45D649;
+     padding: 20px 0;
+}
+
+.skillblock {
+     padding: 0 4px;
+}
+
+.halfOne, .halfTwo, .halfThree, .halfFour {
+     display: none;
+}
+
+.neg-top-marg {
+     margin-top: -26px;
+}
+
+/********* CONTACT PAGE *********/
+
+#map-canvas {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+}
+
+a.linkedin-icon, a.twitter-icon, a.facebook-icon {
+     background-repeat: no-repeat;
+     background-position: left;
+     display: block;
+     padding: 2px 4px 2px 32px;
+     font-weight: bold;
+     text-decoration: none;
+     color: #444;
+}
+a.linkedin-icon:hover, a.twitter-icon:hover, a.facebook-icon:hover {
+     color: #ccc;
+}
+
+a.linkedin-icon {
+     background-image: url(../images/linkedin.png);
+}
+a.twitter-icon {
+     background-image: url(../images/twitter.png);
+}
+a.facebook-icon {
+     background-image: url(../images/facebook.png);
+}
+
+.form_wrap {
+     width: 100%;
+     padding: 10px;
+}
+
+.details_wrap {
+     width: 100%;
+     padding: 10px;
+     text-align: left;
+}
+
+.contact {
+     width: 100%;
+}
+
+.contactForm {
+     background-image: url(../images/london-skyline-2.png);
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: bottom;
+     text-align: left;
+     padding-top: 10px;
+}
+
+.contactForm input, .contactForm textarea {
+     width: 100%;
+     background-color: #eee;
+     padding: 12px;
+     border: none;
+     margin-bottom: 8px;
+     font-style: italic;
+}
+
+.contactForm #send {
+     color: #fff;
+     width: 180px;
+     background-color: #45D649;
+     padding: 8px 20px;
+     font-style: normal;
+     font-weight: bold;
+}
+.contactForm #send:hover {
+     cursor: pointer;
+     background-color: #F6FF00;
+     color: #45D649;
+     -o-transition: all .5s;
+     -moz-transition: all .5s;
+     -webkit-transition: all .5s;
+     -ms-transition: all .5s;
+}
+
+/********* LIGHTBOX *********/
+
+.lightbox-outer {
+     display: none;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.7); 
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 99;
+}
+
+.lightbox-inner {
+     width: 80%;
+     padding: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: #fff;
+     border: 6px solid #fff;
+     -moz-box-shadow: 0px 0px 40px 2px #000;
+     -webkit-box-shadow: 0px 0px 40px 2px #000;
+     box-shadow: 0px 0px 40px 2px #000;
+     /* For IE 8 */
+     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+     /* For IE 5.5 - 7 */
+     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+.popupClose {
+     width: 28px;
+     height: 28px;
+     float: right;
+     margin-top: -34px;
+     margin-right: -34px;
+}
+
+.popupClose:hover {
+     cursor: pointer;
+}
+
+/*===========================================
+/* FOOTER                   
+/*=========================================*/
+
+footer {
+     width: 100%;
+     color: #bbb;
+}
+footer a {
+     color: #bbb;
+     text-decoration: none;
+     /*font-weight: bold;*/
+}
+footer a:hover {
+     color: #F6FF00;
+     text-shadow: 0 0 20px #fff;
+}
+
+.sub_footer {
+     font-family: 'Play', sans-serif;
+     font-size: 1.5em;
+     padding: 55px 0px;
+     /* fallback */
+     background-color: #1CA4FF;
+     background: url(..images/footerbg-1.png);
+     background-repeat: repeat-x;
+     /* Safari 4-5, Chrome 1-9 */
+     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1CA4FF), to(#000));
+     /* Safari 5.1, Chrome 10+ */
+     background: -webkit-linear-gradient(top, #000, #1CA4FF);
+     /* Firefox 3.6+ */
+     background: -moz-linear-gradient(top, #000, #1CA4FF);
+     /* IE 10 */
+      background: -ms-linear-gradient(top, #000, #1CA4FF);
+     /* Opera 11.10+ */
+      background: -o-linear-gradient(top, #000, #1CA4FF);
+}
+
+.sub_footer nav {
+     margin: 0 auto;
+}
+
+.sub_footer nav ul, .default-head nav ul {
+     padding-left: 0;
+}
+
+
+/********** SOCIAL MEDIA SPRITE ***********/
+
+#social {
+     display: inline-block;
+     margin-top: 36px;
+}
+
+     #social ul {
+          padding-left: 0;
+          margin: 0px auto;
+     }
+
+          #social ul li {
+               width: 52px;
+               float: left;
+               margin: 0px 8px;
+          }
+
+               #social ul li a {
+                    text-indent: 300%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    height: 52px;
+                    width: 52px;
+                    display: block;
+                    background-image: url('../images/socialiconsallcut.png');
+                    opacity: 0.6;
+                    border-radius: 50%;
+                    behavior: url(PIE.htc); /*for IE8*/
+               }
+
+                    .linkedin a {
+                         background-position: -342px 323px;
+                    }
+
+                    .twitter a {
+                         background-position: -49px 323px;
+                    }
+
+                    .facebook a {
+                         background-position: -149px 323px;
+                    }
+
+                    #social ul li a:hover {
+                         opacity: 1;
+                    }
+
+.footer {
+     padding: 20px;
+     background-color: #124773;
+}
+
+/************************************************************************/
+/************************* RESPONSIVE STYLING ***************************/
+/************************************************************************/
+
+/********** 340px minimum width ***********/
+
+@media only screen and (min-width: 340px) {
+
+     
+
+}
+
+/********** 460px minimum width ***********/
+
+@media only screen and (min-width: 460px) {
+
+     body {
+          font-size: 14px;
+     }
+
+     .inner {
+          padding: 0 12px;
+     }
+
+     .banner {
+          top: 25%;
+     }
+
+     .banner h1 {
+          font-size: 3.5em;
+     }
+
+     .nav_container {
+          width: 390px;
+     }
+
+     .nav_container a {
+          float: left;
+     }
+
+     .controlLeft {
+          left: 26px;
+     }
+
+}
+
+/********** 500px minimum width ***********/
+
+@media only screen and (min-width: 500px) {
+
+     .half {
+          float: left;
+          width: 50%;
+          padding-left: 4px;
+          padding-right: 4px;
+     }
+
+     .contact {
+          float: left;
+          width: 50%;
+     }
+
+     .sub_footer nav {
+          width: 400px;
+     }
+
+     .sub_footer nav ul li {
+          float: left;
+          padding: 0px 14px;
+     }
+
+}
+
+/********** 568px minimum width ***********/
+
+@media only screen and (min-width: 568px) {
+
+     .banner h3 {
+          font-size: 1.9em;
+     }
+
+     .nav_container a {
+          font-size: 1.6em;
+     }
+
+     /*article {
+          float: left;
+          width: 50%;
+     }*/
+
+}
+
+/********** 684px minimum width ***********/
+
+@media only screen and (min-width: 684px) {
+
+     .skillblock {
+          float: left;
+          width: 33.33%;
+     }
+
+     .half {
+          padding-left: 6px;
+          padding-right: 6px;
+     }
+
+}
+
+/********** 782px minimum width ***********/
+
+@media only screen and (min-width: 782px) {
+
+     .title {
+          float: left;
+     }
+
+     .default-head .inner {
+          padding: 0 12px;
+     }
+
+     .lesserhead {
+          display: none;
+     }
+
+     .lesserhead .nav_container {
+          float: right;
+          margin-top: 16px;
+     }
+
+     .menubtn {
+          display: none;
+     }
+
+     .banner {
+          padding: 40px 15% 60px;
+     }
+
+     .onethird {
+          width: 33.3%;
+     }
+
+     .twothird {
+          width: 66.6%;
+     }
+
+     .onethird img {
+          margin-top: 38px;
+     }
+
+     .sub_footer nav {
+          float: left;
+     }
+
+     #social {
+          float: right;
+          margin-top: 18px;
+     }
+
+}
+
+/********** 824px minimum width ************/
+
+@media only screen and (min-width: 824px) {
+
+     /*article {
+          width: 25%;
+     }*/
+
+     .form_wrap {
+          float: left;
+          width: 70%;
+     }
+
+     .details_wrap {
+          float: left;
+          width: 30%;
+          padding-left: 50px;
+     }
+
+     .contact {
+          float: none;
+          width: 100%;
+     }
+
+}
+
+/********** 882px minimum width ************/
+
+@media only screen and (min-width: 882px) {
+
+     body {
+          font-size: 15px;
+     }
+
+     .banner {
+          padding: 40px 18% 60px;
+          top: 22%;
+     }
+
+     .banner h1 {
+          font-size: 4em;
+     }
+
+     .nav_container {
+          width: 399px;
+     }
+
+     .nav_container a {
+          width: 133px;
+     }
+
+     .half {
+          width: 25%;
+     }
+
+     .sub_footer nav {
+          width: 444px;
+     }
+
+}
+
+/********** 940px minimum width ************/
+
+@media only screen and (min-width: 940px) {
+
+     body {
+          font-size: 16px;
+     }
+
+}
+
+/********** 1272px minimum width ************/
+
+@media only screen and (min-width: 1272px) {
+
+     .controlLeft {
+          left: 78px;
+     }
+
+}
