@@ -154,10 +154,10 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		var activePosition = Math.round($(window).height() / 3);
 		var scrollTop = $(window).scrollTop() + activePosition;
-		var skillsetPosition = $('#skillset').position().top;
+		var commutePosition = $('#commuting').position().top;
 
-		if ( scrollTop > skillsetPosition ) {
-			$('.about-row').animate({backgroundColor : '#1CA4FF'},1000);
+		if ( scrollTop > commutePosition ) {
+			$('.commute-row').animate({backgroundColor : '#1CA4FF'},1000);
 		}
 	});
 
