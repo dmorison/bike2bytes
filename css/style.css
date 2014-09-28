@@ -403,6 +403,14 @@ section.showcase-second {
      left: -500px;
 }
 
+/********* COMMUTING *********/
+
+#commuting {
+     background: url(../images/commute.png) no-repeat bottom;
+}
+
+/********* SKILLS SECTION *********/
+
 .score {
      background-image: url(../images/rating_5.png);
      background-repeat: no-repeat;

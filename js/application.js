@@ -151,7 +151,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$(window).scroll(function(){
+	/*$(window).scroll(function(){
 		var activePosition = Math.round($(window).height() / 3);
 		var scrollTop = $(window).scrollTop() + activePosition;
 		var commutePosition = $('#commuting').position().top;
@@ -159,7 +159,7 @@ $(document).ready(function(){
 		if ( scrollTop > commutePosition ) {
 			$('.commute-row').animate({backgroundColor : '#1CA4FF'},1000);
 		}
-	});
+	});*/
 
 	$(window).scroll(function(){
 		var halfWindow = Math.round($(window).height() / 2);
