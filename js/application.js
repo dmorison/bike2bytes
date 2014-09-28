@@ -161,6 +161,25 @@ $(document).ready(function(){
 		}
 	});*/
 
+	$.getJSON("./log/commuteLog.json", function(data){
+		console.log("inside JSON");
+		console.log(data.commuteLog[1].monthCommutes);
+
+		var commuteMiles = 9.6;
+		var commuteKilometers = commuteMiles * 1.65;
+		var commuteCost = 6.4;
+
+		var totalCommutingMiles = data.commuteLog[0].totalCommutes * commuteMiles;
+		$('#totalCommutingDist').text(totalCommutingMiles);
+		var monthCommutingMiles = data.commuteLog[1].monthCommutes * commuteMiles;
+		$('#monthCommutingDist').text(monthCommutingMiles);
+
+		var totalCommutingSavings = data.commuteLog[0].totalCommutes * commuteCost;
+		$('#totalSavings').text(totalCommutingSavings);
+		var monthCommutingSavings = data.commuteLog[1].monthCommutes * commuteCost;
+		$('#monthSavings').text(monthCommutingSavings);
+	});
+
 	$(window).scroll(function(){
 		var halfWindow = Math.round($(window).height() / 2);
 		var scrollTop = $(window).scrollTop() + halfWindow;

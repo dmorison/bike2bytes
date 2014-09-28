@@ -411,7 +411,15 @@ section.showcase-second {
 }
 
 .commute-row {
-     padding-bottom: 212px;
+     padding-bottom: 19px;
+}
+
+.inner-commute {
+     margin-bottom: 60px;
+}
+
+.route {
+     height: 80px;
 }
 
 /********* SKILLS SECTION *********/

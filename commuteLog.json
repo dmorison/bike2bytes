@@ -1,0 +1,14 @@
+{
+	"commuteLog": [
+		{
+			"totalCommutes": 100
+		},
+		{
+			"monthCommutes": 10
+		},
+		{
+			"previousMonth": 0
+		}
+
+	]
+}
