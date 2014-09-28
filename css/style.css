@@ -406,7 +406,12 @@ section.showcase-second {
 /********* COMMUTING *********/
 
 #commuting {
-     background: url(../images/commute.png) no-repeat bottom;
+     background: url(../images/commute.png) no-repeat center bottom;
+     background-size: 100%;
+}
+
+.commute-row {
+     padding-bottom: 60px;
 }
 
 /********* SKILLS SECTION *********/
