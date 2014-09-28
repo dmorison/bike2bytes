@@ -163,7 +163,7 @@ $(document).ready(function(){
 
 	$.getJSON("./log/commuteLog.json", function(data){
 		console.log("inside JSON");
-		console.log(data.commuteLog[1].monthCommutes);
+		console.log(data.commuteLog[0].totalCommutes);
 
 		var commuteMiles = 9.6;
 		var commuteKilometers = commuteMiles * 1.65;

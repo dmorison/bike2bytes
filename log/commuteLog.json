@@ -1,10 +1,13 @@
 {
 	"commuteLog": [
 		{
-			"totalCommutes" : 4 
+			"totalCommutes": 4
 		},
 		{
-			"monthCommutes" : 4
+			"monthCommutes": 4
+		},
+		{
+			"previousMonth": 0
 		}
 
 	]
