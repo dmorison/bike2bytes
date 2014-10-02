@@ -406,20 +406,37 @@ section.showcase-second {
 /********* COMMUTING *********/
 
 #commuting {
+     background-color: #211D5E;
+     padding-bottom: 0px;
+}
+
+.commute-row {
      background: url(../images/commute.png) no-repeat center bottom;
      background-size: 100%;
 }
 
-.commute-row {
-     padding-bottom: 19px;
+.inner-commute {
+     width: 100%;
+     margin: 0 auto;
+     /*margin-bottom: 60px;*/
 }
 
-.inner-commute {
-     margin-bottom: 60px;
+.quarter {
+     width: 100%;
+     float: left;
 }
 
 .route {
-     height: 80px;
+     height: 50px;
+     margin-bottom: 66px;
+     position: relative;
+}
+
+.bike {
+     width: 60px;
+     height: 50px;
+     background-color: rgba(0, 0, 0, .5);
+     position: relative;
 }
 
 /********* SKILLS SECTION *********/
@@ -777,6 +794,14 @@ footer a:hover {
      .half {
           padding-left: 6px;
           padding-right: 6px;
+     }
+
+     .inner-commute {
+          width: 640px;
+     }
+
+     .quarter {
+          width: 50%;
      }
 
 }

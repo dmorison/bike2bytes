@@ -151,15 +151,16 @@ $(document).ready(function(){
 		}
 	});
 
-	/*$(window).scroll(function(){
+	$(window).scroll(function(){
 		var activePosition = Math.round($(window).height() / 3);
 		var scrollTop = $(window).scrollTop() + activePosition;
 		var commutePosition = $('#commuting').position().top;
 
 		if ( scrollTop > commutePosition ) {
-			$('.commute-row').animate({backgroundColor : '#1CA4FF'},1000);
+			$('#commuting').animate({backgroundColor : '#8CCFFF'},4000);
+			$('.bike').animate({left : 1070}, 4000);
 		}
-	});*/
+	});
 
 	$.getJSON("./log/commuteLog.json", function(data){
 		console.log("inside JSON");
