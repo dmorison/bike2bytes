@@ -172,13 +172,24 @@ $(document).ready(function(){
 
 		var totalCommutingMiles = data.commuteLog[0].totalCommutes * commuteMiles;
 		$('#totalCommutingDist').text(totalCommutingMiles);
-		var monthCommutingMiles = data.commuteLog[1].monthCommutes * commuteMiles;
-		$('#monthCommutingDist').text(monthCommutingMiles);
+		//var monthCommutingMiles = data.commuteLog[1].monthCommutes * commuteMiles;
+		//$('#monthCommutingDist').text(monthCommutingMiles);
 
 		var totalCommutingSavings = data.commuteLog[0].totalCommutes * commuteCost;
 		$('#totalSavings').text(totalCommutingSavings);
 		var monthCommutingSavings = data.commuteLog[1].monthCommutes * commuteCost;
 		$('#monthSavings').text(monthCommutingSavings);
+
+		var monthCommutingMiles = 80;
+		var previousCommutingMiles = 120;
+		var combinedMiles = monthCommutingMiles + previousCommutingMiles;
+		var monthMilesPct = monthCommutingMiles / combinedMiles * 100;
+		console.log(monthMilesPct);
+		var monthMilesWidth = 300 * (monthMilesPct/100);
+		var previousMilesWidth = 300 - monthMilesWidth;
+		$('.dist-this-mth').css('width', monthMilesWidth + 'px');
+		$('.dist-prev-mth').css('width', previousMilesWidth + 'px');
+
 	});
 
 	$(window).scroll(function(){

@@ -426,6 +426,24 @@ section.showcase-second {
      float: left;
 }
 
+.bar-chart {
+     height: 40px;
+     width: 300px;
+}
+
+.bar-chart div {
+     float: left;
+     height: 100%;
+}
+
+.dist-this-mth, .cash-this-mth {
+     background-color: #1322C2;
+}
+
+.dist-prev-mth, .cash-prev-mth {
+     background-color: #D7E81C;
+}
+
 .route {
      height: 50px;
      margin-bottom: 66px;
