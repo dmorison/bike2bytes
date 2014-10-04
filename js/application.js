@@ -177,8 +177,8 @@ $(document).ready(function(){
 
 		var totalCommutingSavings = data.commuteLog[0].totalCommutes * commuteCost;
 		$('#totalSavings').text(totalCommutingSavings);
-		var monthCommutingSavings = data.commuteLog[1].monthCommutes * commuteCost;
-		$('#monthSavings').text(monthCommutingSavings);
+		//var monthCommutingSavings = data.commuteLog[1].monthCommutes * commuteCost;
+		//$('#monthSavings').text(monthCommutingSavings);
 
 		var monthCommutingMiles = 80;
 		var previousCommutingMiles = 120;
