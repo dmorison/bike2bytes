@@ -329,7 +329,7 @@ section.second h2, section.about-second h2 {
      color: #444;
      font-family: 'Play', sans-serif;
      font-size: 2.5em;
-     margin-top: 0px;
+     margin-top: 16px;
 }
 
 section.default-first h3 {
@@ -407,18 +407,18 @@ section.showcase-second {
 
 #commuting {
      background-color: #351FFF;
-     padding-bottom: 0px;
+     /*padding-bottom: 0px;*/
 }
 
 .commute-row {
-     background: url(../images/commute.png) no-repeat center bottom;
-     background-size: 100%;
+     /*background: url(../images/commute.png) no-repeat center bottom;
+     background-size: 100%;*/
 }
 
 .inner-commute {
      width: 100%;
      margin: 0 auto;
-     /*margin-bottom: 60px;*/
+     margin-bottom: 60px;
 }
 
 .quarter {
@@ -429,6 +429,12 @@ section.showcase-second {
 .bar-chart {
      height: 40px;
      width: 300px;
+     margin: 0 auto;
+}
+
+.chart {
+     width: 100%;
+     height: 60px;
 }
 
 .bar-chart div {
@@ -436,12 +442,19 @@ section.showcase-second {
      height: 100%;
 }
 
-.dist-this-mth, .cash-this-mth {
-     background-color: #1322C2;
+.this-mth, .dist-this-mth, .cash-this-mth {
+     background-color: #45D649;
 }
 
-.dist-prev-mth, .cash-prev-mth {
+.prev-mth, .dist-prev-mth, .cash-prev-mth {
      background-color: #D7E81C;
+}
+
+.this-mth, .prev-mth {
+     font-family: 'Indie Flower', cursive;
+     font-size: 2.1em;
+     float: left;
+     height: 100%;
 }
 
 .route {

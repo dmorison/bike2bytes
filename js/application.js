@@ -163,32 +163,55 @@ $(document).ready(function(){
 	});
 
 	$.getJSON("./log/commuteLog.json", function(data){
-		console.log("inside JSON");
-		console.log(data.commuteLog[0].totalCommutes);
 
 		var commuteMiles = 9.6;
 		var commuteKilometers = commuteMiles * 1.65;
 		var commuteCost = 6.4;
 
-		var totalCommutingMiles = data.commuteLog[0].totalCommutes * commuteMiles;
+		var totalCommutingMiles = Math.round(data.commuteLog[0].totalCommutes * commuteMiles);
 		$('#totalCommutingDist').text(totalCommutingMiles);
-		//var monthCommutingMiles = data.commuteLog[1].monthCommutes * commuteMiles;
-		//$('#monthCommutingDist').text(monthCommutingMiles);
+		var monthCommutingMiles = Math.round(data.commuteLog[1].monthCommutes * commuteMiles);
+		$('#monthCommutingDist').text(monthCommutingMiles);
 
-		var totalCommutingSavings = data.commuteLog[0].totalCommutes * commuteCost;
+		var totalCommutingSavings = (data.commuteLog[0].totalCommutes * commuteCost).toFixed(2);
 		$('#totalSavings').text(totalCommutingSavings);
-		//var monthCommutingSavings = data.commuteLog[1].monthCommutes * commuteCost;
-		//$('#monthSavings').text(monthCommutingSavings);
+		var monthCommutingSavings = (data.commuteLog[1].monthCommutes * commuteCost).toFixed(2);
+		$('#monthSavings').text(monthCommutingSavings);
 
-		var monthCommutingMiles = 80;
-		var previousCommutingMiles = 120;
-		var combinedMiles = monthCommutingMiles + previousCommutingMiles;
-		var monthMilesPct = monthCommutingMiles / combinedMiles * 100;
-		console.log(monthMilesPct);
-		var monthMilesWidth = 300 * (monthMilesPct/100);
-		var previousMilesWidth = 300 - monthMilesWidth;
-		$('.dist-this-mth').css('width', monthMilesWidth + 'px');
-		$('.dist-prev-mth').css('width', previousMilesWidth + 'px');
+		var commutesThisMonth = data.commuteLog[1].monthCommutes;
+		var commutesPreviousMonth = data.commuteLog[2].previousMonth;
+
+		var combined = commutesThisMonth + commutesPreviousMonth;
+		var monthPercent = commutesThisMonth / combined * 100;
+
+		$('.this-mth').css('width', monthPercent + '%');
+		$('.this-mth').text(commutesThisMonth);
+		var prevMonthWidth = 100 - monthPercent;
+		$('.prev-mth').css('width', prevMonthWidth + '%');
+		$('.prev-mth').text(commutesPreviousMonth);
+
+
+		function buildChart(commute_var,class_selector) {
+
+			var commutingVariable = commute_var;
+			console.log("commuting variable: " + commutingVariable);
+
+			var thisMonth = commutesThisMonth * commutingVariable;
+			var prevMonth = commutesPreviousMonth * commutingVariable;
+			var combined = thisMonth + prevMonth;
+			var monthPercent = thisMonth / combined * 100;
+			console.log("this months percent of previous month: " + monthPercent);
+			var thisMonthWidth = 300 * (monthPercent/100);
+			$('.' + class_selector + '-this-mth').css('width', thisMonthWidth + 'px');
+			$('.' + class_selector + '-this-mth').text(thisMonth);
+			var prevMonthWidth = 300 - thisMonthWidth;
+			$('.' + class_selector + '-prev-mth').css('width', prevMonthWidth + 'px');
+			$('.' + class_selector + '-prev-mth').text(prevMonth);
+
+		}
+
+		//buildChart(commuteMiles,"dist");
+		//buildChart(commuteCost,"cash");
 
 	});
 

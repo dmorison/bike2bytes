@@ -106,34 +106,51 @@
 				</div>
 			</div>
 		</section>
-		<section id="commuting" class="second no-bottom-pad">
+		<!-- <section class="clearfix" style="padding:0;">
+			<div class="this-mth"></div>
+			<div class="prev-mth"></div>
+		</section> -->
+		<section id="commuting" class="second">
 			<div class="commute-row">
-				<div class="inner clearfix">
+				<div class="inner">
+					<h2>Commuting</h2>
 					<div class="inner-commute clearfix">
-						<div class="quarter">
-							<h4>Commuting distance this month:</h4>
-							<div class="bar-chart dist-chart">
-								<div class="dist-this-mth"></div>
-								<div class="dist-prev-mth"></div>
-							</div>
-							<h4>Total commuting distance:</h4>
-							<span id="totalCommutingDist" style="font-family: 'Black Ops One', cursive;font-size:3.2em;"></span><span>miles</span>
-							<span id="monthCommutingDist"></span>
-						</div>
-						<div class="quarter">
-							<h4>Savings this month:</h4>
-							<div class="bar-chart cash-chart">
-								<div class="cash-this-mth"></div>
-								<div class="cash-prev-mth"></div>
-							</div>
-							<h4>Total savings:</h4>
-							<span>&pound;</span><span id="totalSavings"></span>
-							<span id="monthSavings"></span>
+						<h4>This month : Previous month</h4>
+						<div class="chart">
+							<div class="this-mth"></div>
+							<div class="prev-mth"></div>
 						</div>
 					</div>
-					<div class="route">
+					<div class="clearfix">
+						<div class="half">
+							<h4>Commuting distance this month:</h4>
+							<span id="monthCommutingDist" style="font-family: 'Black Ops One', cursive;font-size:2.8em;"></span><span style="font-size: 1.8em;"> miles</span>
+							<!-- <div class="bar-chart dist-chart">
+								<div class="dist-this-mth"></div>
+								<div class="dist-prev-mth"></div>
+							</div> -->
+						</div>
+						<div class="half">
+							<h4>Total commuting distance:</h4>
+							<span id="totalCommutingDist" style="font-family: 'Black Ops One', cursive;font-size:3.2em;"></span><span style="font-size: 2em;"> miles</span>
+						</div>
+						<div class="half">
+							<h4>Savings this month:</h4>
+							<span style="font-family: 'Indie Flower', cursive;font-size:2.8em;">&pound; </span><span id="monthSavings" style="font-family: 'Indie Flower', cursive;font-size:3.0em;"></span>
+							<!-- <div class="bar-chart cash-chart">
+								<div class="cash-this-mth"></div>
+								<div class="cash-prev-mth"></div>
+							</div> -->
+						</div>
+						<div class="half">
+							<h4>Total savings:</h4>
+							<span style="font-family: 'Indie Flower', cursive;font-size:3.2em;">&pound; </span><span id="totalSavings" style="font-family: 'Indie Flower', cursive;font-size:3.6em;"></span>
+						</div>
+					
+					<!-- <div class="route">
 						<div class="bike">
 						</div>
+					</div> -->
 					</div>
 				</div>
 			</div>
