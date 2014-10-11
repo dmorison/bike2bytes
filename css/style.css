@@ -678,7 +678,7 @@ footer a:hover {
 }
 
 .sub_footer nav ul, .default-head nav ul {
-     padding-left: 0;
+     padding-left: 0px;
 }
 
 
@@ -695,7 +695,7 @@ footer a:hover {
      }
 
           #social ul li {
-               width: 52px;
+               width: 40px;
                float: left;
                margin: 0px 8px;
           }
@@ -704,25 +704,33 @@ footer a:hover {
                     text-indent: 300%;
                     white-space: nowrap;
                     overflow: hidden;
-                    height: 52px;
-                    width: 52px;
+                    height: 40px;
+                    width: 40px;
                     display: block;
-                    background-image: url('../images/socialiconsallcut.png');
-                    opacity: 0.6;
+                    background-image: url('../images/sprite-1.png');
+                    opacity: 0.7;
                     border-radius: 50%;
                     behavior: url(PIE.htc); /*for IE8*/
                }
 
-                    .linkedin a {
-                         background-position: -342px 323px;
+                    .facebook a {
+                         background-position: -320px -183px;
                     }
 
                     .twitter a {
-                         background-position: -49px 323px;
+                         background-position: -478px -183px;
                     }
 
-                    .facebook a {
-                         background-position: -149px 323px;
+                    .googleplus a {
+                         background-position: -238px -183px;
+                    }
+
+                    .linkedin a {
+                         background-position: -559px -183px;
+                    }
+
+                    .github a {
+                         background-position: -640px -183px;
                     }
 
                     #social ul li a:hover {
@@ -803,6 +811,10 @@ footer a:hover {
      .sub_footer nav ul li {
           float: left;
           padding: 0px 14px;
+     }
+
+     .sub_footer nav ul, .default-head nav ul {
+          padding-left: 47px;
      }
 
 }
@@ -898,6 +910,10 @@ footer a:hover {
      #social {
           float: right;
           margin-top: 18px;
+     }
+
+     .sub_footer nav ul, .default-head nav ul {
+          padding-left: 0px;
      }
 
 }
