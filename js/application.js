@@ -158,7 +158,7 @@ $(document).ready(function(){
 
 		if ( scrollTop > commutePosition ) {
 			$('#commuting').animate({backgroundColor : '#94DFFF'},4000);
-			$('.bike').animate({left : 1245}, 4000);
+			$('.bike').animate({left : 1245}, 5000);
 		}
 	});
 
