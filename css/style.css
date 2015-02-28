@@ -414,13 +414,10 @@ section.showcase-second {
 }
 
 .bike-sign {
+     display: none;
      position: absolute;
      right: -117px;
      top: -84px;
-}
-
-img.bike-sign {
-     opacity: 0.3;
 }
 
 .commute-row {
@@ -992,8 +989,8 @@ footer a:hover {
           font-size: 16px;
      }
 
-     img.bike-sign {
-          opacity: 1;
+     .bike-sign {
+          display: block;
      }
 
 }
