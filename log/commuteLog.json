@@ -1,16 +1,16 @@
 {
 	"commuteLog": [
 		{
-			"totalCommutes": 92
+			"totalCommutes": 113
 		},
 		{
-			"monthCommutes": 1
+			"monthCommutes": 12
 		},
 		{
-			"previousMonth": 15
+			"previousMonth": 10
 		},
 		{
-			"including": "3 April 2015"
+			"including": "22 May 2015"
 		}
 
 	]
