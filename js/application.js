@@ -164,9 +164,9 @@ $(document).ready(function(){
 
 	$.getJSON("./log/commuteLog.json", function(data){
 
-		var commuteMiles = 9.6;
+		var commuteMiles = 10;
 		var commuteKilometers = commuteMiles * 1.65;
-		var commuteCost = 6.4;
+		var commuteCost = 7.0;
 
 		var totalCommutingMiles = Math.round(data.commuteLog[0].totalCommutes * commuteMiles);
 		$('#totalCommutingDist').text(totalCommutingMiles);
